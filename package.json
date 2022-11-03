@@ -14,5 +14,6 @@
     "dependencies": {
         "assert": "^2.0.0",
         "mocha": "^10.1.0"
-    }
+    },
+    "repository": "git://github.com/parkbeommin/beomtil"
 }
