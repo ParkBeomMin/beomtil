@@ -26,6 +26,6 @@ const result2 = changeValueNotation({ notaionTest1: 1,notaion_test2: 2, notaion_
 
 ## Version
 
-### v1.0.0
+### v1.0.1
 
 -   changeValueNotataion()
