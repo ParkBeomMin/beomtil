@@ -88,4 +88,5 @@ const change_snake_case = (value) => {
     return returnValue;
 };
 
-module.exports = { changeValueNotation };
+const { masking } = require("./masking.js");
+module.exports = { changeValueNotation, masking };
