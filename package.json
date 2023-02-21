@@ -1,6 +1,6 @@
 {
     "name": "beomtil",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "useful util function",
     "main": "index.js",
     "scripts": {
