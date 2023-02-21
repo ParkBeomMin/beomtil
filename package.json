@@ -1,10 +1,10 @@
 {
     "name": "beomtil",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "useful util function",
     "main": "index.js",
     "scripts": {
-        "test": "mocha ./index.test.js"
+        "test": "mocha $target"
     },
     "keywords": [
         "util"
