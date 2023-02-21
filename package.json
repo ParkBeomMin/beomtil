@@ -4,7 +4,7 @@
     "description": "useful util function",
     "main": "index.js",
     "scripts": {
-        "test": "mocha ./index.test.js"
+        "test": "mocha $target"
     },
     "keywords": [
         "util"
