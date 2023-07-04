@@ -7,20 +7,20 @@
 const changeValueNotation = (value, notation) => {
     let changeFunction = null;
     switch (notation) {
-        case "camel":
+        case 'camel':
             changeFunction = changeCamelCase;
             break;
-        case "pascal":
+        case 'pascal':
             changeFunction = ChangePascalCase;
             break;
-        case "snake":
+        case 'snake':
             changeFunction = change_snake_case;
             break;
         default:
             changeFunction = changeCamelCase;
             break;
     }
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
         return changeFunction(value);
         // switch (notation) {
         //     case 'camel':
@@ -32,7 +32,7 @@ const changeValueNotation = (value, notation) => {
         //     default:
         //         return changeCamelCase(value);
         // }
-    } else if (typeof value === "object") {
+    } else if (typeof value === 'object') {
         let returnValue = {};
         for (key in value) {
             returnValue[changeFunction(key)] = value[key];
@@ -42,11 +42,11 @@ const changeValueNotation = (value, notation) => {
 };
 
 const changeCamelCase = (value) => {
-    let returnValue = "";
-    for (let i = 0; i < value.length++; i++) {
+    let returnValue = '';
+    for (let i = 0; i < value.length; i++) {
         if (i == 0 && value.charAt(i) === value.charAt(i).toUpperCase()) {
             returnValue = value.charAt(i).toLowerCase();
-        } else if (i != value.length - 1 && value.charAt(i) === "_") {
+        } else if (i != value.length - 1 && value.charAt(i) === '_') {
             returnValue += value.charAt(i + 1).toUpperCase();
             i++;
         } else {
@@ -57,11 +57,11 @@ const changeCamelCase = (value) => {
 };
 
 const ChangePascalCase = (value) => {
-    let returnValue = "";
-    for (let i = 0; i < value.length++; i++) {
+    let returnValue = '';
+    for (let i = 0; i < value.length; i++) {
         if (i == 0 && value.charAt(i) === value.charAt(i).toLowerCase()) {
             returnValue = value.charAt(i).toUpperCase();
-        } else if (i != value.length - 1 && value.charAt(i) === "_") {
+        } else if (i != value.length - 1 && value.charAt(i) === '_') {
             returnValue += value.charAt(i + 1).toUpperCase();
             i++;
         } else {
@@ -71,15 +71,11 @@ const ChangePascalCase = (value) => {
     return returnValue;
 };
 const change_snake_case = (value) => {
-    let returnValue = "";
-    for (let i = 0; i < value.length++; i++) {
+    let returnValue = '';
+    for (let i = 0; i < value.length; i++) {
         if (i == 0 && value.charAt(i) === value.charAt(i).toUpperCase()) {
             returnValue = value.charAt(i).toLowerCase();
-        } else if (
-            i != value.length - 1 &&
-            value.charAt(i) === value.charAt(i).toUpperCase() &&
-            value.charAt(i) != "_"
-        ) {
+        } else if (i != value.length - 1 && value.charAt(i) === value.charAt(i).toUpperCase() && value.charAt(i) != '_') {
             returnValue += `_${value.charAt(i).toLowerCase()}`;
         } else {
             returnValue += value.charAt(i);
@@ -88,5 +84,4 @@ const change_snake_case = (value) => {
     return returnValue;
 };
 
-const { masking } = require("./masking.js");
-module.exports = { changeValueNotation, masking };
+module.exports = { changeValueNotation };
