@@ -50,3 +50,7 @@ const result2 = beomtil.masking("mask", 2, 1);
 ### v1.0.2
 
 -   masking()
+
+### v1.0.3
+
+-   compatible esm, cjs ✨
