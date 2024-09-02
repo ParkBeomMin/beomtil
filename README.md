@@ -41,6 +41,69 @@ const result2 = beomtil.masking("mask", 2, 1);
 
 ```
 
+### String Utils
+
+#### capitalize(string)
+
+Capitalizes the first letter of the given string.
+
+-   `string` : (required) The string to be capitalized. Allows string.
+
+```
+const { capitalize } = require('beomtil');
+
+const result = capitalize('hello');
+// result = Hello
+```
+
+```
+import { capitalize } from 'beomtil';
+
+const result = capitalize('hello');
+// result = Hello
+```
+
+#### camelToSnake(string)
+
+Converts a camelCase string to snake_case.
+
+-   `string` : (required) The camelCase string to convert. allow string.
+
+```
+const { camelToSnake } = require('beomtil');
+
+const result = camelToSnake(beomTil);
+// result = beom_til
+```
+
+```
+import { camelToSnake } from 'beomtil';
+
+const result = camelToSnake(beomTil);
+// result = beom_til
+```
+
+#### truncate(string, length)
+
+Truncates the given string to the specified length and appends an ellipsis.
+
+-   `string` : (required) The string to be truncated.
+-   `length` : (required) The maximum length of the truncated string.
+
+```
+const { truncate } = require('beomtil');
+
+const result = truncate('Hello World', 5);
+// result = Hello...
+```
+
+```
+import { truncate } from 'beomtil';
+
+const result = truncate('Hello World', 5);
+// result = Hello...
+```
+
 ## Version
 
 ### v1.0.1
